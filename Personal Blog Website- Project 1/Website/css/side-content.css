@@ -1,0 +1,116 @@
+
+.container {
+	
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	margin: 30px 0 0 0;
+	padding: 40px;
+	
+}
+
+
+.aside-content {
+	
+	width: 300px;
+	height: 850px;
+	margin: 20px 0;
+	padding: 20px 0 0 0;
+	border: 2px solid #3c9ec2;
+	border-radius: 50px;
+	
+	
+}
+
+h2 {
+	
+	color: #192a39; 
+	
+	
+}
+.about-me {
+	
+	text-align: center;
+	margin: 30px 0;
+}
+.about-me h2 {
+	
+	padding: 20px 0;
+	
+}
+
+.about-img {
+	
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	margin: 0 auto;
+	
+}
+
+.about-me p {
+	
+	text-align: center;
+	padding: 20px;
+}
+
+.Archives h2 {
+	
+	margin: 0 0 20px 0;
+	text-align: center;
+}
+.Archives ul {
+	
+	list-style: none;
+	padding: 0 30px 0 30px;
+}
+
+.Archives li {
+	
+	padding: 5px 0;
+	
+}
+
+.Archives a {
+	
+	color: #3c9ec2;
+}
+.follow {
+	
+	margin: 40px 0;
+	text-align: center;
+	
+}
+
+.social {
+	
+	font-size: 25px;
+	
+}
+
+.fa-facebook,
+.fa-twitter,
+.fa-instagram,
+.fa-tumblr {
+	
+	margin: 50px 10px;
+	color: #192a39;
+	cursor: pointer;
+}
+
+.fa-facebook:hover {
+	
+	color: #3c9ec2;
+}
+.fa-twitter:hover {
+	
+	color: #3c9ec2;
+}
+.fa-instagram:hover {
+	
+	color: #3c9ec2;
+}
+.fa-tumblr:hover {
+	
+	color: #3c9ec2;
+}

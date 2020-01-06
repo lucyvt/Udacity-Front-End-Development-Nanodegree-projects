@@ -1,0 +1,100 @@
+@import url(/Website/css/header-style.css);
+
+* {
+	margin: 0;
+	
+	box-sizing: border-box;
+}
+
+html {
+	
+	font-family: 'Kalam', sans-serif;
+	
+}
+
+h1,
+h2, 
+h3 {
+	
+	text-transform: uppercase;
+}
+
+h2,
+h3 {
+	
+	color: #192a39;
+}
+.posts-sec {
+	
+	display: flex;
+	margin: 50px 190px 0 190px;
+	padding: 30px;
+	
+}
+.post {
+	
+	
+	padding: 0 0 40px 0;
+	border-bottom: thick solid lightgrey; 
+	
+}
+.post-header {
+	
+	width: 800px;
+	border-radius: 20px;
+	
+}
+
+.post h1 {
+	
+	margin: 30px 0 0 0;
+	font-size: 28px;
+	color: #3c9ec2;
+}
+
+.post-info {
+	
+	color: lightgrey;
+	font-size: 15px;
+	padding: 0 0 20px 0;
+
+}
+
+.post-info span {
+	
+	color: blue;
+	text-decoration: underline;
+}
+
+.content {
+	
+	width: 800px;
+	text-align: justify;
+	
+}
+
+
+.link-to-posts {
+	
+	text-align: center;
+	margin: -20px 0px 0 0px;
+	font-style: italic;
+}
+
+.newer {
+	
+	margin-left: 40px;
+}
+
+.list {
+	
+	margin: 15px 0;
+
+}
+
+
+h2, 
+h3 {
+	margin: 20px 0;
+}
+
