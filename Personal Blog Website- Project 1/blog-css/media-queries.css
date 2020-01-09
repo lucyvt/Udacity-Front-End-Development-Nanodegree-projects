@@ -1,0 +1,44 @@
+/*Medium screens*/
+@media screen and (max-width: 700px) {
+	
+	
+	html {
+		
+		scroll-behavior: smooth;
+		overflow-x: hidden;
+	}
+	
+	.container {
+		
+		grid-template-columns: auto;
+		
+		margin: 0 0 0 -30px;
+		
+		
+		
+	}
+	
+	.aside-content {
+		
+		display: none;
+	}
+	
+	.blog-info {
+		
+		display: block;
+	}
+	
+	.blog-info .Archives ul {
+		
+		text-align: center;
+	}
+	.blog-info .Archives ul li{
+		
+		display: inline;
+		
+		
+	}
+	
+	
+}
+
