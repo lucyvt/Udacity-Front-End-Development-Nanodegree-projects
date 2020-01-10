@@ -7,7 +7,7 @@ This repository contains the projects of the frontend nanodegree which I started
 
 - [x] Personal Blog Website [https://github.com/NohaaAa/Udacity-Front-End-Development-Nanodegree-projects/tree/master/Personal%20Blog%20Website-%20Project%201]
 
-- [] Landing Page []
-- [] Weather journal App []
-- [] Evaluate a News Article with Natural Language Processing []
-- [] FEND Capstone - Travel App []
+- [ ] Landing Page []
+- [ ] Weather journal App []
+- [ ] Evaluate a News Article with Natural Language Processing []
+- [ ] FEND Capstone - Travel App []
