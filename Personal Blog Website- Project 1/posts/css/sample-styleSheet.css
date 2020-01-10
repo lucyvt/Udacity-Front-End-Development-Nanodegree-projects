@@ -1,10 +1,12 @@
 @import url(/blog-css/header-style.css);
-@import url(/blog-css/media-queries.css);
+@import url(/blog-css/footer-style.css);
+@import url(media-query.css);
 
 * {
-	margin: 0;
 	
+	margin: 0;
 	box-sizing: border-box;
+	
 }
 
 html {
@@ -30,11 +32,18 @@ h4{
 .posts-sec {
 	
 	
-	margin: 50px 190px 0 190px;
+	margin: 50px 0;
+	text-align: justify;
 	padding: 30px;
 	
 }
-
+blockquote {
+	
+	font-weight: 800;
+	padding: 10px 0;
+	
+}
+bla
 .post {
 	
 	
