@@ -13,7 +13,7 @@ The aim of this project is to build a multi-section landing page, with a dynamic
 
 ### Live link
 
-[]()
+[landing Page](https://heuristic-heyrovsky-3d7e71.netlify.com/#section2)
 
 ### Getting started
 
