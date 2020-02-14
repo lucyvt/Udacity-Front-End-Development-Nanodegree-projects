@@ -71,7 +71,7 @@ const postWeatherData = async (url = '', data = {}) => {
          const newData = await req.json();
          return newData;
      } catch(error) {
-         console.log(error);
+         console.log('error', error);
      }
 };
 /* Function to GET Project Data */
