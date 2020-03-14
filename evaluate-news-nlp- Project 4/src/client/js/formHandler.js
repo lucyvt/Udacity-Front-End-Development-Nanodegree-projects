@@ -44,11 +44,11 @@ function handleSubmit(event) {
 
         .then( (response) => {
 
-            document.querySelector('section.url-results #polarity').innerHTML = res.polarity || ""
-            document.querySelector('section.url-results #subjectivity').innerHTML = res.subjectivity || ""
-            document.querySelector('section.url-results #polarity_confidence').innerHTML = res.polarity_confidence || ""
-            document.querySelector('section.url-results #subjectivity_confidence').innerHTML = res.subjectivity_confidence  || ""
-            document.querySelector('section.url-results #excerpt').innerHTML = res.text || ""
+            document.querySelector('section.url-results #polarity').innerHTML = response.polarity || ""
+            document.querySelector('section.url-results #subjectivity').innerHTML = response.subjectivity || ""
+            document.querySelector('section.url-results #polarity_confidence').innerHTML = response.polarity_confidence || ""
+            document.querySelector('section.url-results #subjectivity_confidence').innerHTML = response.subjectivity_confidence  || ""
+            document.querySelector('section.url-results #excerpt').innerHTML = response.text || ""
         })
         
 
