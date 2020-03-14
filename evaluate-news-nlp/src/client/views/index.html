@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title> News Evaluation With NLP </title>
+        
+    </head>
+
+    <body>
+
+        <header>
+            <div class="">
+                <img class="logo" src="/src/client/styles/NLP_logo-1024x585.jpg" />
+            </div>
+            <!-- <div class="">
+                navigation
+            </div> -->
+        </header>
+
+        <main>
+
+            <h1>Evaluate News App With NLP</h1>
+
+            <p class="intro">This tool allows You to run Natural Language 
+                Processing (NLP) on articles or blogs found on other websites</p>
+
+            <p class="intro"> This tool will give You back pertinent information about the article, like whether the content is subjective (opinion) or objective (fact-based) and whether it is positive, neutral, or negative in tone.</p>
+
+            <p class="intro">This app is built using Aylien Text Analysis API which is a package of Natural Language Processing and Machine Learning-powered APIs for analyzing and extracting various kinds of information from textual content.</p>
+           
+            <section>
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <input id="url" type="url" name="article_url" value="" placeholder="Enter a Valid URL, Please">
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                </form>
+            <section>
+
+                <section class="url-results">
+                    <strong>Form Results:</strong>
+                     
+                    <ul>
+                        <li>
+                            <h3>Text Polarity:</h3>
+                            <p id="polarity"></p>
+                            <h4>Confidence: </h4>
+                            <p id="polarity_confidence"></p>
+                        </li>
+    
+                        <li>
+                            <h3>Text Subjectivity:</h3>
+                            <p id="subjectivity"></p>
+                            <h4>Confidence: </h4>
+                            <p id="subjectivity_confidence"></p>
+                        </li>
+    
+                        <h3>Text Excerpt:</h3>
+                        <p id="excerpt"></p>
+                    </ul>
+                </section>
+             
+        </main>
+
+        <footer>
+            <p>This Project is created for Udacity FEND by <a href="">Noha M.</a></p>
+        </footer>
+
+        <script>
+            if ('serviceWorker' in navigator) {
+                
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+           }else{
+                console.log("error: service worker not working");
+            }
+        </script>
+    
+    </body>
+</html>
