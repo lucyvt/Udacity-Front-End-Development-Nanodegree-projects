@@ -3,7 +3,7 @@ function handleSubmit(event) {
 
     let urlInput = document.querySelectorAll('#url')
 
-    let json_url = JSON.stringify(urlInput[0].value)
+    let json_url = JSON.parse(JSON.stringify(urlInput[0].value))
 
     if(Client.isValidURL(json_url)) {
         
@@ -20,7 +20,7 @@ function handleSubmit(event) {
             });
             try {
 
-                console.log('problem is here');
+               
                 const newData = await response.json();
 
                 return newData;
@@ -31,15 +31,15 @@ function handleSubmit(event) {
         };
 
         
-        getData('/article', {url: urlInput})
+        analyzeData('/article', {url: json_url})
 
-        .then( (res) => {
+        .then( (response) => {
 
-            document.querySelector('section.url-results #polarity').innerHTML = res.polarity
-            document.querySelector('section.url-results #subjectivity').innerHTML = res.subjectivity
-            document.querySelector('section.url-results #polarity_confidence').innerHTML = res.polarity_confidence
-            document.querySelector('section.url-results #subjectivity_confidence').innerHTML = res.subjectivity_confidence
-            document.querySelector('section.url-results #excerpt').innerHTML = res.text
+            document.querySelector('section.url-results #polarity').innerHTML = response.polarity;
+            document.querySelector('section.url-results #subjectivity').innerHTML = response.subjectivity;
+            document.querySelector('section.url-results #polarity_confidence').innerHTML = response.polarity_confidence;
+            document.querySelector('section.url-results #subjectivity_confidence').innerHTML = response.subjectivity_confidence;
+            document.querySelector('section.url-results #excerpt').innerHTML = response.text;
         })
         
 
