@@ -18,9 +18,16 @@ function handleSubmit(event) {
                 credentials:'same-origin',
                 body: JSON.stringify(data)
             });
-            try {
+            
+            if(response) {
+                try {
+                    a = JSON.parse(response);
+                } catch(e) {
+                    alert(e); // error in the above string (in this case, yes)!
+                }
+            }
+            /*try {
 
-               
                 const newData = await response.json();
 
                 return newData;
@@ -28,18 +35,20 @@ function handleSubmit(event) {
             } catch(error) {
                 console.log('error in sending data');
             };
+            */
         };
 
         
-        analyzeData('/article', {url: json_url})
+        analyzeData('http://localhost:3000/article', {url: json_url})
+
 
         .then( (response) => {
 
-            document.querySelector('section.url-results #polarity').innerHTML = response.polarity;
-            document.querySelector('section.url-results #subjectivity').innerHTML = response.subjectivity;
-            document.querySelector('section.url-results #polarity_confidence').innerHTML = response.polarity_confidence;
-            document.querySelector('section.url-results #subjectivity_confidence').innerHTML = response.subjectivity_confidence;
-            document.querySelector('section.url-results #excerpt').innerHTML = response.text;
+            document.querySelector('section.url-results #polarity').innerHTML = res.polarity || ""
+            document.querySelector('section.url-results #subjectivity').innerHTML = res.subjectivity || ""
+            document.querySelector('section.url-results #polarity_confidence').innerHTML = res.polarity_confidence || ""
+            document.querySelector('section.url-results #subjectivity_confidence').innerHTML = res.subjectivity_confidence  || ""
+            document.querySelector('section.url-results #excerpt').innerHTML = res.text || ""
         })
         
 
