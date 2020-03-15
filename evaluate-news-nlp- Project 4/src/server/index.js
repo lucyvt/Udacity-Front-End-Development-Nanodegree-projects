@@ -54,7 +54,7 @@ app.post('/article', (req, res) => {
 
     AylienAPI.sentiment({
         'url': req.body.url,
-        mode: 'document'
+        
     }, (error, Response) => {
         console.log('Sentiment Analysis is DONE!!!', response)
         res.send(response)
