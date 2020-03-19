@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>TRAVEL APP</title>
+        
+        <!-- adding fontawesome CDN icons-->
+        <script src="https://kit.fontawesome.com/dcf5ef6376.js" crossorigin="anonymous"></script>
+        
+    </head>
+
+    <body>
+        
+        <header>
+            
+            <a aria-label="plane-icon"><i class="fas fa-plane"></i></a>
+            
+            <h1>Explore Egypt!</h1>
+            
+            <a aria-label="plane-icon"><i class="fas fa-globe-africa"></i></a>
+                     
+        </header>
+        
+        <main class="main">
+            <h1>My Trips:</h1>
+<!--            <form class="" onsubmit="return Client.handleSubmit(event)">-->
+            <form>
+                
+                <label for="user-location">My trip to: </label>
+                    <input type="text" name="location" id="user-location" placeholder="Enter Location" class="trip-location" />
+                <label for="user-date">Departing: </label>
+                
+                <input type="date" name="date" id="user-date" placeholder="MM/DD/YYYY" class="trip-date" />
+                
+                <button type="submit" class="save-btn btn">save trip</button>
+                
+                <button type="reset" class="remove-btn btn">remove trip</button>
+                
+            </form>
+        </main>
+        
+        <section class="Res-container">
+            
+            <section class="location-img">
+<!--               image of the location-->
+                <img src="/client/media/assets/images/egyptian-pyramids-sand-desert-clear.webp" />
+                
+            </section>
+            
+            <section class="info">
+                
+                <p class="countdown">Cairo, Egypt is 220 days away</p>
+                
+                <h3>Your Trip Details</h3>
+                
+                <h4 class="typical">Typical weather for then is:</h4>
+                
+                <p class="temps">High- 46, Low- 35</p>
+                
+                <p class="weather-info">Mostly cloudy throughout the day</p>
+                
+            </section>
+            
+        </section>
+        
+     
+        
+
+        <footer>
+            
+            <p class="attribution"> 
+                This project is made for <a href="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011" target="_blank">Udacity_FEND</a>. 
+                Coded by <a href="https://github.com/NohaaAa/Udacity-Front-End-Development-Nanodegree-projects" target="_blank">Noha M</a>. </p>
+            
+        </footer>
+        
+        <!-- <script>
+            if ('serviceWorker' in navigator) {
+                
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+           }else{
+                console.log("error: service worker not working");
+            }
+        </script> -->
+    </body>
+</html>
