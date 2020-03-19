@@ -25,6 +25,7 @@ process and analyze large amounts of natural language data.
 
 ## File Structure
 The project has the following file structure
+    
     - dist/
     - src/
         - client/
