@@ -75,7 +75,6 @@ The project have service workers set up in webpack.
 
 ## Testing
 The project has Jest installed and can be run using `npm run test`
-
 ![testing](screenshot_for_tests.png)
 
 
