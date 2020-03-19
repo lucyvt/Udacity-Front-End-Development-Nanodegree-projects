@@ -53,7 +53,7 @@ function handleSubmit(event) {
         
 
     } else {
-        console.log('Not a Valid URL');
+        alert('This is not a valid URL!');
     }
      
 }
