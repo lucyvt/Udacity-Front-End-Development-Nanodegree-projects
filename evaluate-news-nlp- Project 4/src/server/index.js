@@ -6,7 +6,7 @@ const cors = require('cors')
 const express = require('express')
 var path = require('path')
 
-const mockAPIResponse = require('./mockAPI.js')
+// const mockAPIResponse = require('./mockAPI.js')
 
 const app = express()
 
@@ -45,18 +45,22 @@ app.listen(3000, function () {
     console.log('Example app listening on port 3000!')
 })
 
+// app.get('/test', function (req, res) {
+//     res.send(mockAPIResponse)
+// })
+
 app.get('/test', function (req, res) {
-    res.send(mockAPIResponse)
+    res.send(json);
 })
 
 app.post('/article', (req, res) => {
     console.log(req);
-
+    console.log("Formulating a reques for article analysis... ", req.body);
     AylienAPI.sentiment({
         'url': req.body.url,
         
     }, (error, Response) => {
-        console.log('Sentiment Analysis is DONE!!!', response)
-        res.send(response)
+        console.log('Sentiment Analysis is DONE!!!', Response)
+        res.send(Response)
     });
 })
