@@ -1,0 +1,33 @@
+@import "./base.scss";
+
+header {
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $scond-color;
+    margin: 10px 20px;
+    
+//    flex-wrap: wrap;
+   
+    
+    h1 {
+        
+        font-family: $header-font;
+        font-size: 50px;
+        letter-spacing: 10px;
+        text-transform: capitalize;
+        
+        color: $base-color;
+       
+        
+    }
+    
+    .fas {
+        color: $base-color;
+        font-size: 50px;
+       
+        
+    }
+    
+}

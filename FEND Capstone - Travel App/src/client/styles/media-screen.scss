@@ -1,0 +1,23 @@
+@import "./base.scss";
+
+@media(max-width: $break-point) {
+        
+    header {
+        
+        .fas {
+            display: none;
+        }
+    }
+    
+    .Res-container {
+        
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+}
+
+
+
+

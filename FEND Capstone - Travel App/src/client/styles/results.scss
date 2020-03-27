@@ -1,0 +1,69 @@
+@import "./base.scss";
+
+.Res-container {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    border-style: solid;
+    border-color: white;
+    margin: 0 20px;
+    box-shadow: 5px 5px whitesmoke;
+    padding: 40px 0;
+    border-radius: 15px;
+    
+    .location-img {
+        
+        width: 50%;
+        
+        
+        img {
+            
+            width: 100%;
+        }
+    }
+    
+    .info {
+        
+//        margin: 0 20px 0 0;
+        font-size: 30px;
+        width: 40%;
+        
+        
+        .countdown {
+           
+            .days, .country {
+                
+                color: $btn-color;
+                
+            }
+        }
+        h3 {
+            
+            font-family: $btn-font;
+            font-weight: 100;
+            margin: 20px 0;
+            color: $btn2-color;
+            
+        }
+        
+        h4 {
+            
+            color: $font-color;
+            text-decoration: underline;
+            text-transform: uppercase;
+            margin: 10px 0 20px 0;
+        }
+        
+        .temps, .weather-info {
+            
+            color: $base-color;
+            background-color: $btn2-color;
+            width: 80%;
+            padding: 5px 10px 5px 20px;
+          
+        }
+        
+    }
+    
+}

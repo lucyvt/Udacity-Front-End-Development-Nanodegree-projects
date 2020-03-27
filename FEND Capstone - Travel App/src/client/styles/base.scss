@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Homemade+Apple|Patrick+Hand+SC|Walter+Turncoat&display=swap');
+
+//fonts
+$header-font: 'Homemade Apple', cursive;
+$main-font: 'Walter Turncoat', cursive;
+$basic-font: 'Patrick Hand SC', cursive;
+$btn-font: 'Alfa Slab One', cursive;
+
+//colors
+$font-color: #2A3550;
+$scond-color: #697397;
+$btn-color: #437FF1;
+$btn2-color: #F48B29;
+$base-color: #F3F8FA;
+
+
+//breakpoints
+$break-point: 1001px;
+
+
+*, html {
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    scroll-behavior: 'smoothe';
+    box-sizing: border-box;
+}
+
+body {
+    
+    font-family: $basic-font;
+}
