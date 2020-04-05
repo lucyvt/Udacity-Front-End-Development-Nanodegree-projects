@@ -17,9 +17,9 @@ This is a travel planner application. This project includes a simple form where 
 ![Travel Planner Results](screenshot-for-results.png)
 
 ## APIs used
- [Geonames](http://www.geonames.org/export/web-services.html)
- [Weatherbit](https://www.weatherbit.io/account/create)
- [Pixabay](https://pixabay.com/api/docs/)
+ * [Geonames](http://www.geonames.org/export/web-services.html)
+ * [Weatherbit](https://www.weatherbit.io/account/create)
+ * [Pixabay](https://pixabay.com/api/docs/)
 
 ## File Structure
 The project has the following file structure
