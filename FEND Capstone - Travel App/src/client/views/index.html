@@ -6,9 +6,8 @@
         
         <!-- adding fontawesome CDN icons-->
         <script src="https://kit.fontawesome.com/dcf5ef6376.js" crossorigin="anonymous"></script>
-        
-       
-        
+        <!-- adding Skycons library cdn to use it to show weather icons -->
+        <script src='https://darkskyapp.github.io/skycons/skycons.js'></script>        
     </head>
 
     <body>
@@ -35,24 +34,51 @@
                 </span>
                 <span>
                     
-                    <label for="user-date">Departing: </label>
+                    <label for="user-date">Departing Date: </label>
                 
-                    <input type="date" name="date" id="user-date" placeholder="MM/DD/YYYY" class="trip-date" />
+                    <input type="date" name="date" id="start-date" placeholder="MM/DD/YYYY" class="trip-date" />
+                    
+                    <div class="end">
+
+                    <label for="user-date">Leaving Date: </label>
+                
+                    <input type="date" name="date" id="end-date" placeholder="MM/DD/YYYY" class="trip-date" />
+                </div>
                 </span>
                 <div class="btns">
                     
-                    <button type="submit" class="save-btn btn">save trip</button>
+                    <button type="submit" class="save-btn btn">Submit</button>
                 
-                    <button type="reset" class="remove-btn btn">remove trip</button>
+                    <button type="reset" class="remove-btn btn">Reset</button>
                 </div>
             </form>
         </main>
-        
+        <!-- add to-do list icon -->
+        <section class="todo-list">
+            
+            <form class="to-do-form">
+                <h6 class="add-to-do"><i class="fas fa-clipboard-list"></i>Add a to-do list</h6>
+                <input autofocus type="text" aria-label="Enter a new todo item" placeholder="E.g. Build a web app" class="add-task" /> 
+            </form>
+            <ul class="to-do-list">
+            </ul>
+
+            
+        </section>
+        <!-- <section class='save-btns'>
+
+            <button type="button" class="store-trip">Save Ttip</button>
+            <button type="button" class="remove-trip">Remove Trip</button>
+
+        </section> -->
+
         <section class="Res-container">
+
+            
             
             <section class="location-img">
 <!--               image of the location-->
-                <img src="" />
+                <img class='img' />
                 
             </section>
             
@@ -62,18 +88,23 @@
                     <span class="country"></span> is 
                     <span class="days"></span> away!</p>
                 
+                <p class="trip_length">You will travel for
+                        <span class="length"></span><span class="ldays"></span></p>
+
                 <h3>Your Trip Details</h3>
                 
                 <h4 class="typical">Typical weather for then is:</h4>
+                <div class='temp-sec'>
+
+                    <p class="temps"></p>
+                    <img src='/weather-icons/a01n.png' class="c-icon icon" />
+                    <img src='/weather-icons/a01n.png' class="d-icon icon" />
                 
-                <p class="temps"></p>
-                
-                <p class="weather-info"></p>
-                
+                </div>
             </section>
             
         </section>
-        
+       
 
         <footer>
             
@@ -83,7 +114,7 @@
             
         </footer>
         
-        <!-- <script>
+        <script>
             if ('serviceWorker' in navigator) {
                 
                 window.addEventListener('load', () => {
@@ -92,6 +123,6 @@
            }else{
                 console.log("error: service worker not working");
             }
-        </script> -->
+        </script>
     </body>
 </html>

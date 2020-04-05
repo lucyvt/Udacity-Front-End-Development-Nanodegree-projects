@@ -31,15 +31,19 @@
         span {
             
            
-            white-space: nowrap;
+            // white-space: nowrap;
             margin: 20px auto;
+            display: flex;
             
             label {
                 
                 font-size: 34px;
                 font-weight: 600;
                 color: $font-color;
-                
+            }
+
+            label:nth-of-type(2) {
+                margin-left: 40px;
             }
             
             input {
@@ -47,7 +51,7 @@
                 border-color: $scond-color;
                 border-style: solid;
                 border-radius: 4px;
-                width: 250px;
+                width: 240px;
                 height: 40px;
                 padding: 10px;
                 margin-left: 10px;
@@ -55,6 +59,8 @@
                
                 
             }
+
+            
             
             
         }
@@ -104,3 +110,80 @@
     
 }
 
+.todo-list {
+
+    margin-top: -40px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+
+    .add-to-do {
+
+        width: 300px;
+        padding: 5px 10px;        
+        text-align: left;
+        font-size: 25px;
+        font-family: Alfa Slab One,cursive;
+        color: #437ff1;
+        text-transform: capitalize;
+        cursor: pointer;
+
+        .fa-clipboard-list {
+            margin: 0 20px 0 10px;
+            color: #437ff1;
+        } 
+    }  
+    .add-task {
+        width: 300px;
+        border-radius: 15px;
+        margin: 15px 0;
+        border-color: #697397;
+        padding-left: 10px;
+        font-size: 20px;
+    }
+    .to-do-list {
+        border-color: #437ff1;
+        border-style: solid;
+        padding: 5px;
+        /* font-size: 20px; */
+        border-radius: 5px;
+        background-color: #437ff1;
+        /* color: white; */
+        /* list-style-type: myanmar; */
+        width: 50%;
+        // display: none;
+        .done {
+            text-decoration: line-through;
+        }
+        .item {
+            color: white;
+            font-size: 20px;
+            /* padding: 5px; */
+            margin: 5px 0;
+            display: flex;
+            justify-content: baseline;
+            align-items: flex-end;
+            cursor: pointer;
+            .fa-square {
+
+                margin: 0 10px;
+                cursor: pointer;
+                display: block; 
+            }
+            .fa-check-square {
+
+                margin: 0 10px;
+                cursor: pointer;
+                display: none;
+
+            }
+            .fas {
+                margin-left: 50px;
+                cursor: pointer;
+
+            }
+
+            
+        }
+    }
+}

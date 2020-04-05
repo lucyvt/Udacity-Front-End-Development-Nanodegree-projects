@@ -7,6 +7,7 @@ const express = require('express');
 const path = require('path');
 const fetch = require('node-fetch');
 const app = express();
+const skycons = require('skycons');
 
 /* Middleware*/
 app.use(cors());
@@ -18,38 +19,47 @@ app.use(bodyParser.urlencoded({
 
 app.use(express.static('dist'));
 //Creating Routes
-app.get('/', (req, res) => {
+app.get('/', function (req, res) {
     
-    res.sendFile('/dist/index.html');
-});
-
-app.post('/weather-data', async (req,res) => {
-
-    //get api data from darkSky
-    const getForecast = await fetch(req.body.url);
-
-    console.log(req.body.url);
-
-    const forecast = getForecast.json();
-
-
-        const darkSky = {
-
-            tempHigh: Math.round(forecast.daily.data[0].tempratureHigh),
-            tempLow: Math.round(forecast.daily.data[0].temperatureLow),
-            icon: forecast.daily.data[0].icon,
-            summary: forecast.daily.data[0].summary
-        }
-
-        res.send(darkSky);
-        console.log(darkSky);
-
-    // }).catch( (error) => {
-    //     console.log('Error', error);
-    // })
-
+    res.sendFile(path.join(__dirname, 'dist', 'index.html'))
     
 })
+
+app.post('/forecast', async (req,res) => {
+
+    //get api data from weatherbit
+    const getForecast = await fetch(req.body.url);
+
+    // console.log(req.body.url);
+    const response = getForecast.json();
+    // .then( (response) => {
+    //     return response.json();
+    // })
+    response.then ( (forecast) => {
+        
+        const weatherbit = {
+            current_temp: forecast.data[0].temp,
+            // current_feeltemp: forecast.data[0].app_temp,
+            current_icon: forecast.data[0].weather.icon,
+            daily_tempHigh: forecast.data[0].max_temp,
+            daily_tempLow: forecast.data[0].low_temp,
+            daily_icon: forecast.data[0].weather.icon
+            
+        }
+
+        res.send(weatherbit);
+
+    }).catch ( (error) => {
+        console.log(error);
+    })
+        // console.log(darkSky);
+    
+})
+
+// app.post('/all', (req, res) => {
+//     res.send(trips);
+//     console.log(trips);
+// })
 // designates what port the app will listen to for incoming requests
 app.listen(3000, function () {
     

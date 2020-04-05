@@ -32,7 +32,21 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [ MiniCssExtraPlugin.loader, 'css-loader', 'sass-loader']
-            }
+            },
+
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: [
+                    
+                    'file-loader',
+                ],
+            },
+            
+            {
+                test: /\.html$/i,
+                loader: 'html-loader',
+            },
+
         ]
     },
     plugins: [
@@ -47,7 +61,7 @@ module.exports = {
             skipWaiting: true
         }),
         new CopyWebpackPlugin([
-            {from:'src/client/media/assets/images',to:'images'} 
+            {from:'src/client/media/assets/weather-icons',to:'weather-icons'} 
         ]),
     ]
 }

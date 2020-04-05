@@ -1,6 +1,6 @@
 function handleSubmit(event) {
     event.preventDefault()
-
+ 
     let urlInput = document.querySelectorAll('#url')
 
     let json_url = JSON.parse(JSON.stringify(urlInput[0].value))
@@ -9,8 +9,8 @@ function handleSubmit(event) {
         
         console.log('::: Sentiment Analysis is in progress :::');
         
-        const analyzeData = async (url, data={})=> { 
-            const response = await fetch(url, {
+        const analyzeData =  (url, data={})=> { 
+            const response =  fetch(url, {
                 method: 'POST',
                 headers: {
                 'Content-Type': 'application/json',

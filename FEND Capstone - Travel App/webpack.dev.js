@@ -39,6 +39,11 @@ module.exports = {
                 use: ['file-loader',
                 ],
             },
+            
+            {
+                test: /\.html$/i,
+                loader: 'html-loader',
+            },
         ]
     },
     plugins: [
@@ -57,7 +62,7 @@ module.exports = {
             protectWebpackAssets: false
         }),
         new CopyWebpackPlugin([
-            {from:'src/client/media/assets/images',to:'images'} 
+            {from:'src/client/media/assets/weather-icons',to:'weather-icons'} 
         ]),
     ]
 }

@@ -1,8 +1,29 @@
 @import "./base.scss";
-
+/*
+.save-btns {
+    display:none;
+    justify-content: flex-start;
+    align-self: end;
+    justify-self: start;
+    button {
+        margin: 40px 10px;
+        width: 200px;
+        // height: 35px; 
+        border-radius: 15px;
+        border-color: #F3F8FA;
+        background-color: #F48B29;
+        font-family: "Alfa Slab One", cursive;
+        color: #F3F8FA;
+        font-size: 20px;
+        padding: 5px;
+        cursor: pointer;
+    }
+}
+*/
 .Res-container {
     
-    display: flex;
+    // display: flex;
+    display: none;
     flex-direction: row;
     justify-content:space-between;
     border-style: solid;
@@ -54,15 +75,24 @@
             text-transform: uppercase;
             margin: 10px 0 20px 0;
         }
-        
-        .temps, .weather-info {
-            
-            color: $base-color;
-            background-color: $btn2-color;
+        .temp-sec {
+            background-color: #f48b29;
             width: 80%;
             padding: 5px 10px 5px 20px;
-          
+            display: flex;
+            
+
+            .temps, .weather-info {
+            
+                color: $base-color;
+                background-color: $btn2-color;
+                width: 80%;
+                padding: 5px 10px 5px 20px;
+              
+            }
+            
         }
+        
         
     }
     
