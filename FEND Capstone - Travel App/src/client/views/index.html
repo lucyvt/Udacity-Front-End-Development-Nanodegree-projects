@@ -2,7 +2,8 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>TRAVEL APP</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TRAVEL Planner</title>
         
         <!-- adding fontawesome CDN icons-->
         <script src="https://kit.fontawesome.com/dcf5ef6376.js" crossorigin="anonymous"></script>
@@ -27,24 +28,22 @@
 <!--            <form class="" onsubmit="return Client.handleSubmit(event)">-->
             <form>
                 
-                <span>
+                <span class="place">
                     
                     <label for="user-location">My trip to: </label>
                     <input type="text" name="location" id="user-location" placeholder="Enter Location" class="trip-location" />
                 </span>
-                <span>
-                    
-                    <label for="user-date">Departing Date: </label>
-                
-                    <input type="date" name="date" id="start-date" placeholder="MM/DD/YYYY" class="trip-date" />
-                    
-                    <div class="end">
-
-                    <label for="user-date">Leaving Date: </label>
-                
-                    <input type="date" name="date" id="end-date" placeholder="MM/DD/YYYY" class="trip-date" />
+                <div class="dates">
+                    <span class="start"> 
+                        <label for="user-date">Departing Date: </label>
+                        <input type="date" name="date" id="start-date" placeholder="MM/DD/YYYY" class="trip-date" />
+                    </span>
+                    <span class="end">
+                        <label for="user-date">Leaving Date: </label>
+                        <input type="date" name="date" id="end-date" placeholder="MM/DD/YYYY" class="trip-date" />
+                    </span>
                 </div>
-                </span>
+
                 <div class="btns">
                     
                     <button type="submit" class="save-btn btn">Submit</button>
@@ -58,9 +57,11 @@
             
             <form class="to-do-form">
                 <h6 class="add-to-do"><i class="fas fa-clipboard-list"></i>Add a to-do list</h6>
-                <input autofocus type="text" aria-label="Enter a new todo item" placeholder="E.g. Build a web app" class="add-task" /> 
+                <input autofocus type="text" aria-label="Enter a new todo item" placeholder="What do you plan to do?" class="add-task" /> 
             </form>
+
             <ul class="to-do-list">
+               
             </ul>
 
             
@@ -90,16 +91,16 @@
                 
                 <p class="trip_length">You will travel for
                         <span class="length"></span><span class="ldays"></span></p>
-
-                <h3>Your Trip Details</h3>
+                <div class='details'>
+                    <h3>Your Trip Details</h3>
                 
-                <h4 class="typical">Typical weather for then is:</h4>
-                <div class='temp-sec'>
+                    <div class='temp-sec'>
 
-                    <p class="temps"></p>
-                    <img src='/weather-icons/a01n.png' class="c-icon icon" />
-                    <img src='/weather-icons/a01n.png' class="d-icon icon" />
+                        <p class="temps"></p>
+                        <img src='/weather-icons/a01n.png' class="c-icon icon" />
+                        <img src='/weather-icons/a01n.png' class="d-icon icon" />
                 
+                    </div>
                 </div>
             </section>
             

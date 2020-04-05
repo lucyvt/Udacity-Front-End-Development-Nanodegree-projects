@@ -18,11 +18,13 @@ $base-color: #F3F8FA;
 $break-point: 1001px;
 $smaller_point: 800px;
 $small-point: 600px;
+$mobile_point: 650px;
+$point_2: 520px;
 
 *, html {
     margin: 0;
     padding: 0;
-    overflow: auto;
+    overflow-x: hidden;
     scroll-behavior: 'smoothe';
     box-sizing: border-box;
 }

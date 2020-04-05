@@ -56,16 +56,19 @@ app.post('/forecast', async (req,res) => {
     
 })
 
-// app.post('/all', (req, res) => {
-//     res.send(trips);
-//     console.log(trips);
-// })
+app.get('/data', (req, res) => {
+    
+    res.send(trips);
+    console.log(trips);
+   
+})
 // designates what port the app will listen to for incoming requests
 app.listen(3000, function () {
     
     console.log('Example app listening on http://localhost:3000/');
     
 });
+
 
 
 module.exports = app
