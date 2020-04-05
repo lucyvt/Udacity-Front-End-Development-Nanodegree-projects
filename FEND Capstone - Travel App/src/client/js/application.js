@@ -67,9 +67,10 @@ export const weatherbitAPI =  async (date) => {
     //to calculate the number of days between today and user-day
     // let today = new Date().toJSON().slice(0, 10);
     // let user_date = new Date(date).toJSON().slice(0, 10);
-    const user_date = Math.round(new Date(date).getTime()/1000);
-    const today = Math.round(new Date().getTime()/1000);
-    const Difference_In_Days = Math.round(Math.abs((today - user_date) / 86400));
+
+    const user_date = new Date(date).getTime();
+    const today = new Date().getTime();
+    const Difference_In_Days = (user_date - today) / (1000 * 3600 * 24);
     
     // let Difference_In_Days = (function(date1, date2) {
 
