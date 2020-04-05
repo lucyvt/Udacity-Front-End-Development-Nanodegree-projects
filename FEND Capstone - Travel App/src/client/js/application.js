@@ -163,7 +163,7 @@ export const pixabayAPI = async(city) => {
 
 
 /*Update UI */
-function updateUI (trips) {
+export function updateUI (trips) {
 
     console.log("updationg UI!!!!");
 
